@@ -1,0 +1,30 @@
+
+
+<div ng-controller="BlogController as ctrl">
+
+	Add Blog:<br>
+<form ng-submit="ctrl.addblog()">
+									<div class="col-md-12">
+										<div class="form-group">
+											<label for="name" class="sr-only">Blog Title : </label>
+											<input placeholder="Give a title here" id="name" type="text" ng-model="ctrl.blogModel.blogname" class="form-control input-lg">
+										</div>	
+									</div>
+									
+									<div class="col-md-12">
+										<div class="form-group">
+											<label for="message" class="sr-only">Blog Content : </label>
+											<textarea placeholder="Enter Blog Content here" id="message" class="form-control input-lg" ng-model="ctrl.blogModel.blogdescription"rows="7"></textarea>
+										</div>	
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<input type="submit" class="btn btn-primary btn-lg " value="Send">
+
+										</div>	
+									</div>
+									
+									
+								</form>	
+									</div>
+

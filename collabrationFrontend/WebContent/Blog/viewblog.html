@@ -1,0 +1,26 @@
+<div class="container" ng-controller="BlogController as ctrl">
+Blog-Name:{{selectedBlog.blogname}}
+<br> user-name: {{selectedBlog.usename}}
+<br>blogdescription: {{selectedBlog.blogdescription}}
+	
+	<form name="form" ng-submit="ctrl.addcomment()" role="form">
+<label for="">Comment:</label>
+ <textarea 
+		 class="form-control"
+		ng-model="ctrl.commentModel.comments"   cols="50" rows="10"> </textarea>
+			
+			<br>
+	<button type="submit"		
+					class="btn btn-primary">Add comment</button>
+		</form>
+
+
+
+Comments:<br>
+<div ng-repeat="commentlist in ctrl.comment">
+<a  href="#" ng-click="ctrl.getuser(commentlist.username)"> username: {{commentlist.commentname}} </a>  <br>
+comment :{{commentlist.commentname}}
+<br>------------------------------------------------------------------------------------
+</div>
+
+</div>
