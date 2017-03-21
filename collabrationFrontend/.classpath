@@ -17,5 +17,6 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="WebContent/resources/images/img1.jpeg"/>
 	<classpathentry kind="lib" path="WebContent/resources/images/img2.jpg"/>
+	<classpathentry kind="lib" path="WebContent/resources/images/collaboration.jpg"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

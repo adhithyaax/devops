@@ -27,7 +27,7 @@
 		</form>
 	job page:{{currentUser.username}}-name<br>
 <div  ng-repeat="joblist in ctrl.jobs">
-<a  href="#" ng-click="ctrl.getJob(joblist.jobname)"> job Title: {{joblist.jobname}}   ------post by :{{joblist.usename}}---- </a>
+<a  href="#" ng-click="ctrl.getJob(joblist.jobname)"> job Title: {{joblist.jobname}}   <!-- ------post by :{{joblist.usename}} -->----  </a>
 <a href="#" ng-click="ctrl.deletejob(joblist.jobname)"> Remove</a>--<a href="#" ng-click="ctrl.editjob(joblist.jobname)"> Edit</a>
 
 </div>

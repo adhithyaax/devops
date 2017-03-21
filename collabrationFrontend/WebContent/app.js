@@ -41,7 +41,15 @@ app.config(function($routeProvider) {
 		    templateUrl : 'Job/listjob.html',
 		    controller  : 'JobController'
 		  })
-		
+
+		  
+		  		  .when('/listjobapply', {
+		    templateUrl : 'Job/listjobapply.html',
+		    controller  : 'JobController'
+		  })
+
+		  
+		  
 		    .when('/viewalluser', {
 		    templateUrl : 'Friend/viewalluser.html',
 		    controller  : 'FriendController'

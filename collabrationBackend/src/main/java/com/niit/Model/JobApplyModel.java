@@ -16,7 +16,7 @@ public class JobApplyModel {
 	@GeneratedValue
 	int jobapplyid;
 	 String username;
-	 String jobid;
+	 String jobname;
 	public int getJobapplyid() {
 		return jobapplyid;
 	}
@@ -29,11 +29,11 @@ public class JobApplyModel {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	public String getJobid() {
-		return jobid;
+	public String getJobname() {
+		return jobname;
 	}
-	public void setJobid(String jobid) {
-		this.jobid = jobid;
+	public void setJobname(String jobname) {
+		this.jobname = jobname;
 	}
 	 
 	 
