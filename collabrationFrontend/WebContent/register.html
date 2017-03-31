@@ -6,21 +6,21 @@
 <input type="text"	name="username" id="username"  placeholder="username" class="form-control"
 					ng-model="ctrl.user.username" required /> 					
 		<br>
-<label for="">FirstName</label> 
+<label for="">First Name</label> 
 <input type="text"	name="firstname" id="firstname" placeholder="firstname" class="form-control"
 					ng-model="ctrl.user.firstname" required /> 					
 		<br>
-<label for="">Secondname</label> 
+<label for="">Second name</label> 
 <input type="text"	name="secondname" id="secondname" placeholder="second name" class="form-control"
 					ng-model="ctrl.user.secondname" required /> 					
 		<br>
 <label for="">Email</label> 
-<input type="text"	name="email" id="email" placeholder="e-mail id" class="form-control"
+<input type="email"	name="email" id="email" placeholder="e-mail id" class="form-control"
 					ng-model="ctrl.user.email" required /> 					
 		<br>
 <label for="">Mobile</label> 
 <input type="text"	name="mobile" id="mobile" placeholder="mobile number" class="form-control"
-					ng-model="ctrl.user.mobile" required /> 					
+					ng-model="ctrl.user.mobile" required minlength="10" maxlength=10" /> 					
 		<br>
 
 <label for="">Password</label> <input type="password"

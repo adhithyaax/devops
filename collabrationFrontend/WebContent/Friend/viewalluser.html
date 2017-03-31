@@ -1,12 +1,21 @@
 <div ng-controller="FriendController as ctrl">
-	
-	user page:{{currentUser.username}}-name<br>
-<div ng-repeat="userlist in ctrl.users">
-<a  href="#" ng-click="ctrl.getuser(userlist.username)"> Username: {{userlist.username}}   ---------------- </a>
-<a href="#" ng-click="ctrl.addFriend(userlist.username)" >Add Friend </a>
-</div>
+		<section>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8" id="fh5co-content">
+								<br><br><h2>All Users<input type="text"
+		 id="text" placeholder="Search Users here" class="form-control"
+		ng-model="searchText" style="width:50%;position:relative;left:460px" /> </h2>
+								<div class="row"><div ng-repeat="userlist in ctrl.users|filter:searchText">
+									<div class="col-md-12">
+										<div class="page-header"><p><span class="glyphicon glyphicon-align-left"></span>
+										<b>Profile :</b><font style="font-size:25px;">&nbsp;&nbsp;&nbsp;{{userlist.firstname}}&nbsp;&nbsp;{{userlist.secondname}}</font></p> 
+						
+		<a href="#" ng-click="ctrl.getuser(userlist.username)"><b>View Profile</b></a><br>
+<a href="#" ng-click="ctrl.addFriend(userlist.username)"><b>Send Friend Request</b></a>
+  </div>									</div>
+									</div>
+								</div>
 
-<br><br><br>
-	
-	<a href="" ng-click="notifications">Notifications</a>
-</div>
+							</div>
+</div></div></section></div>

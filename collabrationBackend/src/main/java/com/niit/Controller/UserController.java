@@ -55,21 +55,28 @@ public class UserController {
 	
 	//@GetMapping(value="/validate")
 	@RequestMapping(value = "/validate", method = RequestMethod.POST)
-	public ResponseEntity<UserModel> validateCredentials(@RequestBody UserModel userModel, HttpSession session){
+	public UserModel validateCredentials(@RequestBody UserModel userModel, HttpSession session){
 		
-		if(userDAO.validate(userModel.getUsername(), userModel.getPassword()) == null){
-			userModel=new UserModel();
-			userModel.setErrorCode("404");
-			userModel.setErrorMessage("Invalid Credential..password..plese try again");
-			
-		}else{
-			userModel.setErrorCode("200");
-			userModel.setErrorMessage("You aer succesfully logged in ....");
-			session.setAttribute("Username", userModel.getUsername());
-			
-				}
-return new ResponseEntity<UserModel>(userModel, HttpStatus.OK);
-}
+		UserModel userModel2= new UserModel();
+		userModel2=userDAO.validate(userModel.getUsername(), userModel.getPassword());
+				if(userModel2 == null){
+					userModel=new UserModel();
+					userModel.setErrorCode("404");
+		System.out.println("Invalid Credential..password..plese try again");
+					userModel.setErrorMessage("Invalid Credential..password..plese try again");
+					
+				}else{
+					
+				//	userDAO.saveonline(userModel2);
+					userModel.setErrorCode("200");
+					System.out.println("sucess log in ");
+					userModel.setErrorMessage("You aer succesfully logged in ....");
+					session.setAttribute("Username", userModel.getUsername());
+					
+						}
+		return userModel2;
+		}
+
 
 	
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
